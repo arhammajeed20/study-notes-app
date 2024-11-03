@@ -6,7 +6,7 @@ import { auth } from '../../config/firebase'
 
 export default function Navbar() {
 
-    const { isAuthenticated, dispatch, user } = useAuthContext()
+    const { isAuthenticated, dispatch } = useAuthContext();
 
 
     const handleLogout = (e) => {

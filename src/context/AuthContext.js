@@ -42,7 +42,7 @@ export default function AuthContext({ children }) {
             }
             setIsAppLoader(false)
         });
-    }, [auth])
+    }, [])
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <Auth.Provider value={{ ...state, dispatch, isAppLoader, setIsAppLoader }}>

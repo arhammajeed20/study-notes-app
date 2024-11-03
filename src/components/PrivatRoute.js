@@ -1,6 +1,5 @@
 import React from 'react'
 import { useAuthContext } from '../context/AuthContext'
-import Login from '../pages/Authentication/Login'
 import { Navigate } from 'react-router-dom'
 
 export default function PrivatRoute(props) {
@@ -11,7 +10,7 @@ export default function PrivatRoute(props) {
 
     const { Component } = props
     if (!isAuthenticated)
-        return <Navigate to="/authentication/login" />
+        return <Navigate to={"/authentication/login"} />
 
     return (
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Input, Row, Typography } from "antd";
+
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 
-const { Title } = Typography;
+
 
 const initialState = {
 
@@ -21,7 +21,7 @@ export default function Login() {
 
   const navigate = useNavigate()
   const [state, setState] = useState(initialState);
-  const [isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
 
 
   const handleChange = (e) =>
@@ -96,4 +96,4 @@ export default function Login() {
       </div>
     </>
   );
-}
+};

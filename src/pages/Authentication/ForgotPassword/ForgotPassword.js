@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Input, Row, Typography } from "antd";
 import { Link } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../../../config/firebase";
 
 
-const { Title } = Typography;
+
 
 
 
@@ -18,7 +17,7 @@ export default function ForgotPassword() {
 
 
     const [state, setState] = useState(initialState);
-    const [isLoading, setIsLoading] = useState(false);
+    const [ setIsLoading] = useState(false);
 
 
     const handleChange = (e) =>
@@ -82,4 +81,4 @@ export default function ForgotPassword() {
             </div>
         </>
     );
-}
+};

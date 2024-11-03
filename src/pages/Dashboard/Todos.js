@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { setDoc, serverTimestamp, doc } from 'firebase/firestore/lite'
 import { Link } from 'react-router-dom'
-import { Col, Typography } from 'antd'
+import { Col } from 'antd'
 import { firestore } from '../../config/firebase'
 import { useAuthContext } from '../../context/AuthContext'
 
 
 
-const { Title } = Typography
+
 
 const initialState = {
     name: "",
@@ -19,7 +19,7 @@ export default function Todos() {
 
     const { user } = useAuthContext()
     const [state, setState] = useState(initialState)
-    const [isLoading, setIsLoading] = useState(false)
+    const [, setIsLoading] = useState(false)
 
     const handleChange = (e) => {
         setState((s) => ({ ...s, [e.target.name]: e.target.value }))

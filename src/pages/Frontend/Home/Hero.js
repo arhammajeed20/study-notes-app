@@ -5,7 +5,7 @@ import { useAuthContext } from '../../../context/AuthContext';
 
 export default function Hero() {
     const navigate = useNavigate();
-    const { isAuthenticated, dispatch } = useAuthContext()
+    const { isAuthenticated } = useAuthContext()
 
     return (
         <>

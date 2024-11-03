@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Input, Row, Typography } from "antd";
+
 import { Link } from "react-router-dom";
 import { auth, firestore } from "../../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore/lite";
 import { useAuthContext } from "../../../context/AuthContext";
 
-const { Title } = Typography;
+
 
 
 const initialState = {
@@ -20,7 +20,7 @@ export default function Register() {
 
   const { dispatch } = useAuthContext()
   const [state, setState] = useState(initialState);
-  const [isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
 
   const handleChange = (e) =>
     setState((s) => ({ ...s, [e.target.name]: e.target.value }));
